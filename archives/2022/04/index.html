@@ -9,7 +9,7 @@
     <meta http-equiv="Cache-Control" content="no-siteapp">
     <title>
         
-            HTTP常用状态码总结(应用层)
+            归档
         
     </title>
     <link rel="shortcut icon" href="#"/>
@@ -32,36 +32,15 @@
 <meta name="generator" content="Hexo 7.0.0"></head>
 <body>
     <a id="cover"></a>
-    <link type="text/css" rel="stylesheet" href="/css/post.css">
+    <link type="text/css" rel="stylesheet" href="/css/archive.css">
 <div id="header" class="header">
     <div class="vertical">
         <div class="inner">
             
-                <h1 class="header-subtitle">HTTP常用状态码总结(应用层)</h1>
+                <h1 class="header-subtitle">归档</h1>
                 <div class="header-subinfo">
-                    <p class="article-info-text">
-                        <span>
-                            <i class="iconfont icon-time"></i> 发表时间：2022-11-14
-                        </span>
-                        
-                            
-                                <span id="/2022/11/14/2022-11-14-HTTP常用状态码总结/" class="leancloud_visitors" data-flag-title="HTTP常用状态码总结(应用层)">
-                                    <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
-                                </span>
-                            
-                            
-                                <span>
-                                    <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2022/11/14/2022-11-14-HTTP常用状态码总结/"></span>
-                                </span>
-                              
-                        
-                    </p>
-                    
-                        
-                            <span class="category-color">计算机网络</span>
-                        
-                    
-                    
+                    <p class="article-info-text Chinese"></p>
+                    <p class="article-info-text English"></p>                  
                 </div>
             
         </div>
@@ -70,241 +49,37 @@
 </div>
 <div id="container">
     
-        <!-- 文章页面 -->
-        <div id="article">
-            <div class="toc"></div>
-            <div class="article-body">
-                <p>HTTP 状态码用于描述 HTTP 请求的结果，比如 2xx 就代表请求被成功处理。</p>
-<p><img src="https://butterflyjay.github.io/image/blog/http-status-code.png" alt="常见HTTP状态码"></p>
-<h3 id="1-1xx-Informational-信息性状态码"><a href="#1-1xx-Informational-信息性状态码" class="headerlink" title="1. 1xx Informational (信息性状态码)"></a>1. 1xx Informational (信息性状态码)</h3><p>相比于其它类别状态码来说，1xx 平时大概率不会碰到</p>
-<table>
-<thead>
-<tr>
-<th>状态码</th>
-<th>含义</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>100</td>
-<td>继续(Continue)</td>
-<td>这个临时响应是用来通知客户端它的部分请求已经被服务器接收，且仍未被拒绝。客户端应当继续发送请求的剩余部分，或者如果请求已经完成，忽略这个响应。服务器必须在请求完成后向客户端发送一个最终响应</td>
-</tr>
-<tr>
-<td>101</td>
-<td>切换协议(Switching Protocols)</td>
-<td>服务器根据客户端的请求切换协议，主要用于websocket或http2升级</td>
-</tr>
-</tbody></table>
-<h3 id="2-2xx-Success-成功状态码"><a href="#2-2xx-Success-成功状态码" class="headerlink" title="2. 2xx Success(成功状态码)"></a>2. 2xx Success(成功状态码)</h3><table>
-<thead>
-<tr>
-<th>状态码</th>
-<th>含义</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>200</td>
-<td>成功(OK)</td>
-<td>请求被成功处理。比如我们发送一个查询用户数据的 HTTP 请求到服务端，服务端正确返回了用户数据。（常见）</td>
-</tr>
-<tr>
-<td>201</td>
-<td>已创建(Created)</td>
-<td>该请求已成功，并因此创建了一个新的资源。这通常是在 POST 请求，或是某些 PUT 请求之后返回的响应。(常见)</td>
-</tr>
-<tr>
-<td>202</td>
-<td>已接受(Accepted)</td>
-<td>请求已经接收到，但还未响应，没有结果。意味着不会有一个异步的响应去表明当前请求的结果，预期另外的进程和服务去处理请求，或者批处理。</td>
-</tr>
-<tr>
-<td>203</td>
-<td>非授权信息(Non-Authoritative Information)</td>
-<td>服务器已成功处理了请求，但返回的实体头部元信息不是在原始服务器上有效的确定集合，而是来自本地或者第三方的拷贝。当前的信息可能是原始版本的子集或者超集。例如，包含资源的元数据可能导致原始服务器知道元信息的超集。使用此状态码不是必须的，而且只有在响应不使用此状态码便会返回<code>200 OK</code>的情况下才是合适的。</td>
-</tr>
-<tr>
-<td>204</td>
-<td>无内容(No Content)</td>
-<td>服务端已经成功处理了请求，但是没有返回任何内容。</td>
-</tr>
-<tr>
-<td>205</td>
-<td>重置内容(Reset Content)</td>
-<td>服务器处理成功，用户终端应重置文档视图</td>
-</tr>
-<tr>
-<td>206</td>
-<td>部分内容(Partial Content)</td>
-<td>服务器成功处理了部分GET请求</td>
-</tr>
-</tbody></table>
-<h3 id="3-3xx-Redirection-重定向状态码"><a href="#3-3xx-Redirection-重定向状态码" class="headerlink" title="3. 3xx Redirection(重定向状态码)"></a>3. 3xx Redirection(重定向状态码)</h3><table>
-<thead>
-<tr>
-<th>状态码</th>
-<th>含义</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>300</td>
-<td>多种选择(Multiple Choice)</td>
-<td>请求拥有多个可能的响应。用户代理或者用户应当从中选择一个。</td>
-</tr>
-<tr>
-<td>301</td>
-<td>永久移动(Moved Permanently)</td>
-<td>请求资源的 URL 已永久更改。在响应中给出了新的 URL。</td>
-</tr>
-<tr>
-<td>302</td>
-<td>临时移动(Found)</td>
-<td>此响应代码表示所请求资源的 URI 已 <em>暂时</em> 更改。未来可能会对 URI 进行进一步的改变。因此，客户机应该在将来的请求中使用这个相同的 URI。</td>
-</tr>
-<tr>
-<td>303</td>
-<td>查看其他位置(See Other)</td>
-<td>服务器发送此响应，以指示客户端通过一个 GET 请求在另一个 URI 中获取所请求的资源。</td>
-</tr>
-<tr>
-<td>304</td>
-<td>未修改(Not Modified)</td>
-<td>这是用于缓存的目的。它告诉客户端响应还没有被修改，因此客户端可以继续使用相同的缓存版本的响应。(协商缓存)</td>
-</tr>
-<tr>
-<td>307</td>
-<td>临时重定向(Temporary Redirect)</td>
-<td>服务器发送此响应，以指示客户端使用在前一个请求中使用的相同方法在另一个 URI 上获取所请求的资源。这与 <code>302 Found</code> HTTP 响应代码具有相同的语义，但用户代理 <em>不能</em> 更改所使用的 HTTP 方法：如果在第一个请求中使用了 <code>POST</code>，则在第二个请求中必须使用 <code>POST</code></td>
-</tr>
-</tbody></table>
-<h3 id="4-4xx-Client-Error-客户端错误状态码"><a href="#4-4xx-Client-Error-客户端错误状态码" class="headerlink" title="4. 4xx Client Error(客户端错误状态码)"></a>4. 4xx Client Error(客户端错误状态码)</h3><table>
-<thead>
-<tr>
-<th>状态码</th>
-<th>含义</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>400</td>
-<td>错误请求(Bad Request)</td>
-<td>发送的HTTP请求存在问题。比如请求参数不合法、请求方法错误。</td>
-</tr>
-<tr>
-<td>401</td>
-<td>未授权(Unauthorized)</td>
-<td>未认证却请求需要认证之后才能访问的资源。</td>
-</tr>
-<tr>
-<td>403</td>
-<td>禁止(Forbidden)</td>
-<td>直接拒绝HTTP请求，不处理。一般用来针对非法请求。</td>
-</tr>
-<tr>
-<td>404</td>
-<td>未找到(Not Found)</td>
-<td>请求的资源未在服务端找到。比如请求某个用户的信息，服务端并没有找到指定的用户。</td>
-</tr>
-<tr>
-<td>409</td>
-<td>冲突(Conflict)</td>
-<td>表示请求的资源与服务端当前的状态存在冲突，请求无法被处理。</td>
-</tr>
-<tr>
-<td>410</td>
-<td>已删除(Gone)</td>
-<td>当请求的内容已从服务器中永久删除且没有转发地址时，将发送此响应。客户端需要删除缓存和指向资源的链接。HTTP 规范打算将此状态代码用于“有限时间的促销服务”。API 不应被迫指出已使用此状态代码删除的资源。</td>
-</tr>
-</tbody></table>
-<h3 id="5-5xx-Server-Error-服务端错误状态码"><a href="#5-5xx-Server-Error-服务端错误状态码" class="headerlink" title="5. 5xx Server Error(服务端错误状态码)"></a>5. 5xx Server Error(服务端错误状态码)</h3><table>
-<thead>
-<tr>
-<th>状态码</th>
-<th>含义</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>500</td>
-<td>服务器错误(Internal Server Error)</td>
-<td>服务器内部错误，无法完成请求</td>
-</tr>
-<tr>
-<td>502</td>
-<td>错误网关(Bad Gateway)</td>
-<td>服务器作为网关或代理出现错误</td>
-</tr>
-<tr>
-<td>503</td>
-<td>服务不可用(Service Unavailable)</td>
-<td>服务器目前无法使用</td>
-</tr>
-</tbody></table>
-<h3 id="6-部分状态码的适用场景"><a href="#6-部分状态码的适用场景" class="headerlink" title="6. 部分状态码的适用场景"></a>6. 部分状态码的适用场景</h3><ul>
-<li>100：客户端在发送POST数据给服务器前，征询服务器情况，看服务器是否处理POST的数据，如果不处理，客户端则不上传POST数据，如果处理，则POST上传数据。常用于POST大数据传输</li>
-<li>206：一般用来做断点续传，或者是视频文件等大文件的加载</li>
-<li>301：永久重定向会缓存。新域名替换旧域名，旧的域名不再使用时，用户访问旧域名时用301就重定向到新的域名</li>
-<li>302：临时重定向不会缓存，常用 于未登陆的用户访问用户中心重定向到登录页面</li>
-<li>304：协商缓存，告诉客户端有缓存，直接使用缓存中的数据，返回页面的只有头部信息，是没有内容部分</li>
-<li>400：参数有误，请求无法被服务器识别</li>
-<li>403：告诉客户端进制访问该站点或者资源，如在外网环境下，然后访问只有内网IP才能访问的时候则返回</li>
-<li>404：服务器找不到资源时，或者服务器拒绝请求又不想说明理由时</li>
-<li>503：服务器停机维护时，主动用503响应请求或 nginx 设置限速，超过限速，会返回503</li>
-<li>504：网关超时</li>
-</ul>
-
-                
-                <p class="end">__END__</p>
-            </div>
-            <div class="article-footer">
-                <div class="suffix-box">
-    <div class="suffix-box-left">
-        <img src="/image/sidebar/avatar.jpg" alt="butterflyjay">
-    </div>
-    <div class="suffix-box-right">
-        <span class="suffix-box-title">文章作者：</span>butterflyjay
-        <br>
-        <span class="suffix-box-title">文章出处：</span><a href="/2022/11/14/2022-11-14-HTTP%E5%B8%B8%E7%94%A8%E7%8A%B6%E6%80%81%E7%A0%81%E6%80%BB%E7%BB%93/" target="_blank">HTTP常用状态码总结(应用层)</a>
-        <br>
-        <span class="suffix-box-title">作者签名：</span>简单地活着, 肆意又精彩.
-        <br>
-        <span class="suffix-box-title">作者仓库：</span><a href="https://github.com/butterflyjay" target="_blank">butterflyjay github</a>
-        <br>
-        <span class="suffix-box-title">版权声明：</span>文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="BY-NC-SA" target="_blank">BY-NC-SA</a> 许可协议，转载请注明出处
-        <br>
-    </div>
-    <div style="clear: both;"></div>
-</div>
-                
-                    <div class="category">
-                        分类：
+        
+            <!-- 归档页面、分类归档页面、标签归档页面 -->
+            <div class="articles">
+                <div class="articles-wrap">
+                    <span class="archive-move-on"></span>
+                    <span class="archive-counter">
                         
-                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+                            目前共计 4 篇日志，继续加油！
                         
-                    </div>
-                
-                
-                <div class="article-prev-next">
+                    </span>
                     
                     
-                        <a href="/2022/02/13/2022-2-13-TCP-%E5%92%8C-UDP/" class="next-prefix">» </a> 下一篇：    <a href="/2022/02/13/2022-2-13-TCP-%E5%92%8C-UDP/" title="发布于 2022-02-13 06:21">TCP 和 UDP</a>
+                        
+                            <div class="archive-title">
+                                <h2 class="archive-year">2022</h2>
+                            </div>
+                            
+                           
+                        <div class="article">
+                            <div class="article-header">
+                                <h1 class="article-title"><a href="/2022/04/14/2022-4-14-HTTP%E5%B8%B8%E7%94%A8%E7%8A%B6%E6%80%81%E7%A0%81%E6%80%BB%E7%BB%93/"><span>HTTP常用状态码总结(应用层)</span></a></h1>
+                                <div class="article-meta">
+                                    <span class="article-time">04-14</span>
+                                </div>
+                            </div>
+                        </div>
                     
                 </div>
             </div>
             
-    <div class="article-comments">
         
-            <div class="comments-title">
-                评论列表
-            </div>
-        
-        <div class="comments-content"></div>
-    </div>
-    
- 
-        </div>
     
 </div>
     <div id="footer">
