@@ -168,6 +168,11 @@
 <li>defer 脚本会在 DOMContentLoaded 事件之后运行，而 async 脚本则不一定。</li>
 </ol>
 <p>因此，如果需要按顺序执行脚本并且不想阻塞 DOM 的解析，可以使用 defer。如果脚本的执行不依赖于其他脚本或 DOM，可以使用 async 加快加载速度。</p>
+<h3 id="8-style标签prefetch-和-preload区别"><a href="#8-style标签prefetch-和-preload区别" class="headerlink" title="8. style标签prefetch 和 preload区别"></a>8. style标签prefetch 和 preload区别</h3><p><code>&lt;style&gt;</code>标签的<code>prefetch</code>和<code>preload</code>属性都用于优化CSS资源的加载，但它们有不同的行为和目的：</p>
+<ul>
+<li><code>prefetch</code>属性告诉浏览器这个CSS资源可能在未来的某个时刻需要被加载，但并不需要立即加载。浏览器会在空闲时间异步加载这个资源，以便在需要时能够立即使用。<code>prefetch</code>适用于那些当前不需要但是可能在未来会需要使用的资源。</li>
+<li><code>preload</code>属性则告诉浏览器这个CSS资源在当前页面中必须被使用，因此应该立即加载和执行。浏览器会在主HTML文档下载和解析完成之前加载这个资源。<code>preload</code>适用于那些当前需要使用的资源。</li>
+</ul>
 
                 
                 <p class="end">__END__</p>
