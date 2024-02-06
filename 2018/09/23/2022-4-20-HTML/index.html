@@ -9,7 +9,7 @@
     <meta http-equiv="Cache-Control" content="no-siteapp">
     <title>
         
-            分类
+            HTML
         
     </title>
     <link rel="shortcut icon" href="#"/>
@@ -32,15 +32,36 @@
 <meta name="generator" content="Hexo 7.0.0"></head>
 <body>
     <a id="cover"></a>
-    <link type="text/css" rel="stylesheet" href="/css/page.css">
+    <link type="text/css" rel="stylesheet" href="/css/post.css">
 <div id="header" class="header">
     <div class="vertical">
         <div class="inner">
             
-                <h1 class="header-subtitle">分类</h1>
+                <h1 class="header-subtitle">HTML</h1>
                 <div class="header-subinfo">
-                    <p class="article-info-text Chinese"></p>
-                    <p class="article-info-text English"></p>                  
+                    <p class="article-info-text">
+                        <span>
+                            <i class="iconfont icon-time"></i> 发表时间：2018-09-23
+                        </span>
+                        
+                            
+                                <span id="/2018/09/23/2022-4-20-HTML/" class="leancloud_visitors" data-flag-title="HTML">
+                                    <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
+                                </span>
+                            
+                            
+                                <span>
+                                    <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2018/09/23/2022-4-20-HTML/"></span>
+                                </span>
+                              
+                        
+                    </p>
+                    
+                        
+                            <span class="category-color">web前端</span>
+                        
+                    
+                    
                 </div>
             
         </div>
@@ -49,17 +70,161 @@
 </div>
 <div id="container">
     
-        <!-- 独立页面 -->
-        
-            <div class="categories">
-                <div class="categories-title">
-                    目前共计 3 个分类
-                </div>
-                <div class="categories-content">
-                    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a><span class="category-list-count">3</span></li></ul>
+        <!-- 文章页面 -->
+        <div id="article">
+            <div class="toc"></div>
+            <div class="article-body">
+                <h3 id="1-DOCTYPE作用"><a href="#1-DOCTYPE作用" class="headerlink" title="1. DOCTYPE作用"></a>1. DOCTYPE作用</h3><p>DOCTYPE是一种指示浏览器以何种HTML或XHTML规范来解析文档的声明。它能够告知浏览器网页文档使用的标记语言的类型以及版本，从而确保浏览器能够正确地展示网页内容。DOCTYPE声明通常位于HTML文档的开头，是HTML文档的必须部分。</p>
+<h3 id="2-img标签的title和alt属性区别"><a href="#2-img标签的title和alt属性区别" class="headerlink" title="2. img标签的title和alt属性区别"></a>2. img标签的title和alt属性区别</h3><ul>
+<li><code>alt</code>属性用于为图像提供替代文本，即使图像无法加载，也可以描述图像内容，提高网页的可访问性和可用性。</li>
+<li><code>title</code>属性则提供有关图像的额外信息，可以通过鼠标悬停或使用辅助技术来查看。它通常用于提供更多的上下文或补充描述，但并不是必需的。</li>
+</ul>
+<h3 id="3-简述一下src与href的区别"><a href="#3-简述一下src与href的区别" class="headerlink" title="3. 简述一下src与href的区别"></a>3. 简述一下src与href的区别</h3><p>在 HTML 中，<code>src</code> 属性是用来指定外部资源的 URL，如图像、脚本或嵌入式对象的位置。例如，<code>&lt;img&gt;</code> 标签中的 <code>src</code> 属性指定图像的 URL。</p>
+<p>而 <code>href</code> 属性则用来指定超文本链接的目标资源的位置，如超链接或 <code>link</code> 标记中的外部样式表。例如，<code>&lt;a&gt;</code> 标签中的 <code>href</code> 属性指定了链接目标的 URL。</p>
+<h3 id="4-常用的meta标签"><a href="#4-常用的meta标签" class="headerlink" title="4. 常用的meta标签"></a>4. 常用的meta标签</h3><p><code>meta</code> 标签提供了有关 HTML 文档的元数据，如描述、关键词、作者等。以下是一些常用的 <code>meta</code> 标签：</p>
+<ol>
+<li><p><strong>字符集声明</strong>：声明文档使用的字符编码，通常为 UTF-8。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p><strong>视口设置</strong>：控制页面在移动设备上的显示方式，如缩放级别和页面宽度。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p><strong>页面描述</strong>：提供页面的简短描述，有助于搜索引擎了解页面内容。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;A brief description of the page.&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p><strong>关键词</strong>：设置页面关键词，有助于搜索引擎优化（SEO）。但请注意，大多数现代搜索引擎不再使用此标签。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;keywords&quot;</span> <span class="attr">content</span>=<span class="string">&quot;keyword1, keyword2, keyword3&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p><strong>作者</strong>：指定页面作者。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;author&quot;</span> <span class="attr">content</span>=<span class="string">&quot;Author Name&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p><strong>禁止缓存</strong>：告诉浏览器不要缓存页面。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;Cache-Control&quot;</span> <span class="attr">content</span>=<span class="string">&quot;no-cache, no-store, must-revalidate&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;Pragma&quot;</span> <span class="attr">content</span>=<span class="string">&quot;no-cache&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;Expires&quot;</span> <span class="attr">content</span>=<span class="string">&quot;0&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p><strong>自动刷新</strong>：设置页面在特定时间间隔后自动刷新。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;refresh&quot;</span> <span class="attr">content</span>=<span class="string">&quot;30&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p><strong>跳转到其他页面</strong>：在指定的时间间隔后，自动将用户重定向到其他页面。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;refresh&quot;</span> <span class="attr">content</span>=<span class="string">&quot;5; URL=https://example.com/new-page.html&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p><strong>兼容模式</strong>：指定浏览器（如 Internet Explorer）使用特定的渲染模式。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p><strong>搜索引擎索引控制</strong>：指示搜索引擎是否应索引页面和跟踪链接。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;robots&quot;</span> <span class="attr">content</span>=<span class="string">&quot;index, follow&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>这些常用的 <code>meta</code> 标签可以帮助你控制页面的显示、搜索引擎优化和其他功能。根据页面需求，可以根据需要添加更多的 <code>meta</code> 标签。</p>
+<h3 id="5-H5-和-H4-不同处"><a href="#5-H5-和-H4-不同处" class="headerlink" title="5. H5 和 H4 不同处"></a>5. H5 和 H4 不同处</h3><ul>
+<li>语义化标签: <code>header</code>、<code>footer</code>、<code>nav</code>、<code>section</code>、<code>article</code>、<code>aside</code> 等</li>
+<li>增强型表单：<code>date</code>(从一个日期选择器选择一个日期) 、<code>email</code>(包含 e-mail 地址的输入域) 、<code>number</code>(数值的输入域) 、<code>range</code>(一定范围内数字值的输入域) 、<code>search</code>(用于搜索域) 、<code>tel</code>(定义输入电话号码字段) 等</li>
+<li>视频和音频：<code>audio</code>、<code>video</code></li>
+<li><code>Canvas</code>绘图、 <code>SVG</code>绘图</li>
+<li>地理定位：<code>Geolocation</code></li>
+<li>拖放API：<code>drag</code></li>
+<li><code>web worker</code>：是运行在后台的 <code>JavaScript</code>，独立于其他脚本，不会影响页面的性能</li>
+<li><code>web storage</code>: <code>localStorage</code>、<code>sessionStorage</code></li>
+<li><code>WebSocket</code>: <code>HTML5</code> 开始提供的一种在单个 <code>TCP</code> 连接上进行全双工通讯的协议</li>
+</ul>
+<h3 id="6-SVG-和-CANVAS的区别"><a href="#6-SVG-和-CANVAS的区别" class="headerlink" title="6. SVG 和 CANVAS的区别"></a>6. SVG 和 CANVAS的区别</h3><h4 id="6-1-可扩展性："><a href="#6-1-可扩展性：" class="headerlink" title="6.1 可扩展性："></a>6.1 可扩展性：</h4><ul>
+<li>SVG是基于矢量的点、线、形状和数学公式来构建的图形，该图形是没有像素的，放大缩小不会失真。</li>
+<li>Canvas是由一个个像素点构成的图形，放大会使图形变得颗粒状和像素化（模糊）。</li>
+<li>SVG可以在任何分辨率下以高质量的打印，Canvas不适合在任意分辨率下打印。</li>
+</ul>
+<h4 id="6-2-渲染能力："><a href="#6-2-渲染能力：" class="headerlink" title="6.2 渲染能力："></a>6.2 渲染能力：</h4><ul>
+<li>当SVG很复杂时，它的渲染就会变得很慢，因为在很大程度上去使用DOM时，渲染会变得很慢。</li>
+<li>Canvas提供了高性能的渲染和更快的图形处理能力，例如：适合制作H5小游戏。</li>
+<li>当图像中具有大量元素时，SVG文件的大小会增长得更快（导致DOM变得复杂），而Canvas并不会增加太多。</li>
+</ul>
+<h4 id="6-3-灵活度："><a href="#6-3-灵活度：" class="headerlink" title="6.3 灵活度："></a>6.3 灵活度：</h4><ul>
+<li>SVG可以通过JavaScript和CSS进行修改，用SVG来创建动画和制作特效都非常方便。</li>
+<li>Canvas只能通过JavaScript进行修改，创建动画得一帧帧重绘。</li>
+</ul>
+<h4 id="6-4-使用场景："><a href="#6-4-使用场景：" class="headerlink" title="6.4 使用场景："></a>6.4 使用场景：</h4><ul>
+<li>Canvas主要用于游戏开发、绘制图形、复杂照片的合成，以及对图片进行像素级别的操作，如：取色器、复古照片。</li>
+<li>SVG非常适合显示矢量徽标（Logo）、图标（ICON）和其他几何设计。</li>
+</ul>
+<h3 id="7-defer-和-async-的区别"><a href="#7-defer-和-async-的区别" class="headerlink" title="7. defer 和 async 的区别"></a>7. defer 和 async 的区别</h3><p>defer 和 async 都是用于脚本加载和执行的关键字，两者的主要区别如下：</p>
+<ol>
+<li>defer 脚本会在 HTML 文档解析完成后执行，而 async 脚本会在下载完毕后立即执行。</li>
+<li>defer 脚本会按照它们在文档中的顺序执行，而 async 脚本是在下载完成后尽快执行，可能会打乱它们在文档中的顺序。</li>
+<li>defer 脚本会在 DOMContentLoaded 事件之后运行，而 async 脚本则不一定。</li>
+</ol>
+<p>因此，如果需要按顺序执行脚本并且不想阻塞 DOM 的解析，可以使用 defer。如果脚本的执行不依赖于其他脚本或 DOM，可以使用 async 加快加载速度。</p>
+<h3 id="8-style标签prefetch-和-preload区别"><a href="#8-style标签prefetch-和-preload区别" class="headerlink" title="8. style标签prefetch 和 preload区别"></a>8. style标签prefetch 和 preload区别</h3><style>标签的prefetch和preload属性都用于优化CSS资源的加载，但它们有不同的行为和目的：
+
+- `prefetch`属性告诉浏览器这个CSS资源可能在未来的某个时刻需要被加载，但并不需要立即加载。浏览器会在空闲时间异步加载这个资源，以便在需要时能够立即使用。`prefetch`适用于那些当前不需要但是可能在未来会需要使用的资源。
+- `preload`属性则告诉浏览器这个CSS资源在当前页面中必须被使用，因此应该立即加载和执行。浏览器会在主HTML文档下载和解析完成之前加载这个资源。`preload`适用于那些当前需要使用的资源。
+
+
+                
+                <p class="end">__END__</p>
+            </div>
+            <div class="article-footer">
+                <div class="suffix-box">
+    <div class="suffix-box-left">
+        <img src="/image/sidebar/avatar.jpg" alt="butterflyjay">
+    </div>
+    <div class="suffix-box-right">
+        <span class="suffix-box-title">文章作者：</span>butterflyjay
+        <br>
+        <span class="suffix-box-title">文章出处：</span><a href="/2018/09/23/2022-4-20-HTML/" target="_blank">HTML</a>
+        <br>
+        <span class="suffix-box-title">作者签名：</span>简单地活着, 肆意又精彩.
+        <br>
+        <span class="suffix-box-title">作者仓库：</span><a href="https://github.com/butterflyjay" target="_blank">butterflyjay github</a>
+        <br>
+        <span class="suffix-box-title">版权声明：</span>文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="BY-NC-SA" target="_blank">BY-NC-SA</a> 许可协议，转载请注明出处
+        <br>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+                
+                    <div class="category">
+                        分类：
+                        
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
+                        
+                    </div>
+                
+                
+                <div class="article-prev-next">
+                    
+                        <a href="/2018/09/23/2018-9-23-C++%E5%9F%BA%E7%A1%80/" class="prev-prefix">« </a> 上一篇：    <a href="/2018/09/23/2018-9-23-C++%E5%9F%BA%E7%A1%80/" title="发布于 2018-09-23 06:21">C++基础</a>
+                        <br>
+                    
+                    
                 </div>
             </div>
+            
+    <div class="article-comments">
         
+            <div class="comments-title">
+                评论列表
+            </div>
+        
+        <div class="comments-content"></div>
+    </div>
+    
+ 
+        </div>
     
 </div>
     <div id="footer">
@@ -93,7 +258,7 @@
                     
                         <li class=""><a href="/" class="" target="_self"><span class="iconfont icon-home-fill"></span>首页</a></li>
                     
-                        <li class=" active "><a href="/category" class="" target="_self"><span class="iconfont icon-folder-fill"></span>分类</a></li>
+                        <li class=""><a href="/category" class="" target="_self"><span class="iconfont icon-folder-fill"></span>分类</a></li>
                     
                         <li class=""><a href="/tag" class="" target="_self"><span class="iconfont icon-discount-fill"></span>标签</a></li>
                     
